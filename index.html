@@ -9,7 +9,17 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="settings"></div>
+    <div class="settings">
+        <div class="colorSettings">
+            <div class="settingHeading">Color Settings</div>
+            <button class="blackButton">Black</button>
+            <button class="rainbowButton">Rainbow</button>
+        </div>
+        <div class="sizeSettings">
+            <div class="settingHeading">Size</div>
+            <input type="range" id="columns" min="1" max="100" step="1">
+        </div>
+    </div>
     <div class="toy">
         <div class="toyTop">Make A Sketch!</div>
         <div class="sketchContainer"></div>

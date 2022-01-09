@@ -7,32 +7,30 @@ body {
     background-color: peachpuff;
 }
 
-button {
+
+
+.settings {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50vw;
-    max-width: 125px;
-    height: 40vh;
-    max-height: 125px;
-    margin: 1vh 1vw;
-    text-align: center;
-    font-size: 2em;
-    font-family: cursive;
-    line-height: 2;
-    background-color: white;
-    color: goldenrod;
-    border-radius: 100%;
+    flex-direction: column;
+    margin: 1vh 2vw 0;
+    padding: 40vh 0;
+    background-color: powderblue;
+    border-style: solid;
+    border-color: black;
+    border-radius: 32px;
+}
+
+.blackButton, .rainbowButton {
+
 }
 
 .toy {
     width: 900px;
     margin: 1vh auto;
     border-style: solid;
-    border-color: white;
+    border-color: black;
     border-radius: 32px;
     background-color: crimson;
-    
 }
 
 .toyTop {
@@ -69,4 +67,22 @@ button {
     justify-content: space-between;
     height: auto;
     width: 100%;
+}
+
+.setButton, .shakeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    max-width: 125px;
+    height: 40vh;
+    max-height: 125px;
+    margin: 1vh 1vw;
+    text-align: center;
+    font-size: 2em;
+    font-family: cursive;
+    line-height: 2;
+    background-color: white;
+    color: goldenrod;
+    border-radius: 100%;
 }
