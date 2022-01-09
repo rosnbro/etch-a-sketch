@@ -4,7 +4,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
-    background-color: peachpuff;
+    background-color: #A8DADC;
 }
 
 .settings {
@@ -13,9 +13,10 @@ body {
     flex-direction: column;
     margin: 1vh 2vw 0;
     padding: 10vh 0;
-    background-color: powderblue;
+    background-color: #457B9D;
+    color: #f1faee;
     border-style: solid;
-    border-color: black;
+    border-color: #f1faee;
     border-radius: 32px;
 }
 
@@ -35,9 +36,9 @@ body {
     height: 5vh;
     border-style: solid;
     border-radius: 8px;
-    border-color: black;
-    background-color: powderblue;
-    color: black;
+    border-color: #f1faee;
+    background-color: #457B9D;
+    color: #f1faee;
     font-family: cursive;
     font-size: 1.5rem;
     text-align: center;
@@ -50,8 +51,9 @@ body {
 }
 
 .blackOn, .blackButton:hover {
-    color: white;
+    color: #f1faee;
     background-color: black;
+    border-color: #f1faee;
 }
 
 #columns {
@@ -62,9 +64,9 @@ body {
     width: 900px;
     margin: 1vh auto;
     border-style: solid;
-    border-color: black;
+    border-color: #f1faee;
     border-radius: 32px;
-    background-color: crimson;
+    background-color: #E63946;
 }
 
 .toyTop {

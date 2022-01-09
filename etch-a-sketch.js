@@ -1,6 +1,7 @@
 //variable and constant declaration
 
 const sketchBox = [];
+const settingsColor = "#457B9D";
 const sketchContainer = document.querySelector(".sketchContainer");
 const setButton = document.querySelector(".setButton");
 const shakeButton = document.querySelector(".shakeButton");
@@ -30,12 +31,12 @@ function displayGrid(columns) {
     let size = columns * columns;
     sketchContainer.style.cssText += `grid-template-columns: repeat(${columns}, 1fr);`;
 
-    for (let i = 0; i < size; i++) {
-        let randomColor = Math.floor(Math.random() * 7);
+    for (let i = 0, j = 0; i < size; i++, j++) {
+        if (j > 6) j = 0;
         sketchBox[i] = document.createElement("div");
         sketchBox[i].classList.add("sketchBox");
         sketchBox[i].addEventListener("mouseover", () => {
-            sketchBox[i].style.backgroundColor = color[randomColor];
+            sketchBox[i].style.backgroundColor = color[j];
         });
         sketchContainer.appendChild(sketchBox[i]);
     }
@@ -56,16 +57,16 @@ function black() {
     }
     blackButton.classList.add("blackOn");
     rainbowButton.classList.remove("rainbowOn");
-    colorPicker.value = "#b0e0e6";
-    colorPicker.style.backgroundColor = "#b0e0e6";
+    colorPicker.value = settingsColor;
+    colorPicker.style.backgroundColor = settingsColor;
 }
 
 function rainbow() {
     color = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
     rainbowButton.classList.add("rainbowOn");
     blackButton.classList.remove("blackOn");
-    colorPicker.value = "#b0e0e6";
-    colorPicker.style.backgroundColor = "#b0e0e6";
+    colorPicker.value = settingsColor;
+    colorPicker.style.backgroundColor = settingsColor;
 }
 
 function customColor() {
