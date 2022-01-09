@@ -1,12 +1,13 @@
 //variable and constant declaration
 
 let columns = 100;
+const color = ["black"];
 const sketchBox = [];
 const sketchContainer = document.querySelector(".sketchContainer");
-const sizeButton = document.querySelector(".sizeButton");
+const setButton = document.querySelector(".setButton");
 const shakeButton = document.querySelector(".shakeButton");
 
-sizeButton.addEventListener("click", () => sizePrompt());
+setButton.addEventListener("click", () => sizePrompt());
 shakeButton.addEventListener("click", () => clearContainer());
 
 sketchContainer.style.cssText += `grid-template-columns: repeat(${columns}, 1fr);`;
@@ -18,16 +19,20 @@ function displayGrid(size) {
         sketchBox[i].classList.add("sketchBox");
         sketchContainer.appendChild(sketchBox[i]);
         sketchBox[i].addEventListener("mouseover", () => {
-            sketchBox[i].style.backgroundColor = "black"
+                sketchBox[i].style.backgroundColor = color[0];
         });
     }
 }
 
+function colorSelect() {
+    color = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+    color = ["black"];
+}
+
 function sizePrompt() {
-    columns = prompt("How many columns in your etch-a-sketch? (max 100)");
-    while (columns > 100) {
-        columns = prompt("Sorry, that's too many. Maximum is 100.");
-    }
+    do {
+        columns = prompt("Resolution: Please input an integer from from 1 to 100.");
+    } while (columns == null || columns <= 0 || columns > 100)
     sketchContainer.style.cssText += `grid-template-columns: repeat(${columns}, 1fr);`;
     clearContainer();
 }

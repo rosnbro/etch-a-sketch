@@ -11,8 +11,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 125px;
-    height: 125px;
+    width: 50vw;
+    max-width: 125px;
+    height: 40vh;
+    max-height: 125px;
     margin: 2vh 2vw;
     text-align: center;
     font-size: 2em;
@@ -24,10 +26,10 @@ button {
 }
 
 .toy {
-    
+    width: 80vw;
 }
 
-.header {
+.toyTop {
     height: auto;
     padding: 3vh 0 0;
     color: goldenrod;
@@ -37,19 +39,11 @@ button {
     font-family: fantasy;
 }
 
-.footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: auto;
-    width: 100%;
-}
-
 .sketchContainer {
     display: grid;
-    width: 80vw;
-    height: 70vh;
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
     grid-auto-rows: auto;
     border-style: outset;
     border-color: black;
@@ -60,4 +54,13 @@ button {
 .sketchBox {
     background-color: lightgray;
     z-index: 2;
+}
+
+.toyBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
 }
