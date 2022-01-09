@@ -1,10 +1,10 @@
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 900px 1fr;
     align-items: center;
     justify-content: center;
     margin: 0;
-    background-color: crimson;
+    background-color: peachpuff;
 }
 
 button {
@@ -15,7 +15,7 @@ button {
     max-width: 125px;
     height: 40vh;
     max-height: 125px;
-    margin: 2vh 2vw;
+    margin: 1vh 1vw;
     text-align: center;
     font-size: 2em;
     font-family: cursive;
@@ -26,7 +26,13 @@ button {
 }
 
 .toy {
-    width: 80vw;
+    width: 900px;
+    margin: 1vh auto;
+    border-style: solid;
+    border-color: white;
+    border-radius: 32px;
+    background-color: crimson;
+    
 }
 
 .toyTop {
@@ -41,7 +47,7 @@ button {
 
 .sketchContainer {
     display: grid;
-    width: 700px;
+    width: 600px;
     height: 500px;
     margin: 0 auto;
     grid-auto-rows: auto;
